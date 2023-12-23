@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en" class="">
+	<head>
+		<meta http-equiv="cache-control" content="0" />
+		<meta http-equiv="expires" content="0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aerostreet Official Store</title>
+		<script>
+			const data = [
+				{
+					id: 'tiktokshop',
+					link: 'https://www.tiktok.com/@aerostreet',
+					icons: 'Tiktokshop icon.png',
+					text: 'Aerostreet',
+					// css: [
+					// 	'color: red',
+					// 	'font-weight: bold',
+					// ],
+				
+				},
+				{
+					id: 'tiktokshop',
+					link: 'https://www.tiktok.com/@aerostreet.girls',
+					icons: 'Tiktokshop icon.png',
+					text: 'Aerostreet Girls',
+					// css: [
+					// 	'outline: 3px solid red',
+					// 	'color: red',
+					// 	'font-weight: bold',
+					// ],
+				},
+				{
+					id: 'shopee',
+					link: 'https://shope.ee/VZi1DSR9N',
+					icons: 'Shopee icon.png',
+					text: '',
+					// css: [
+					// 	'color: red',
+					// 	'font-weight: bold',
+					// ],
+
+				},
+				{
+					id: 'lazada',
+					link: 'https://lzd.co/Aerostreet',
+					icons: 'Lazada icon.png',
+					text: '',
+					// css: [
+					// 	'color: red',
+					// 	'font-weight: bold',
+					// ],
+
+				},
+				{
+					id: 'tokopedia',
+					link: 'https://tokopedia.link/aerostreet',
+					icons: 'Tokopedia icon.png',
+					text: '',
+					// css: [
+					// 	'color: red',
+					// 	'font-weight: bold',
+					// ],
+
+				},
+				{
+					id: 'bukalapak',
+					link: 'https://www.bukalapak.com/aerostreet-official',
+					icons: 'Bukalapak icon.png',
+					text: '',
+					// css: [
+					// 	'color: red',
+					// 	'font-weight: bold',
+					// ],
+				},
+
+				{
+					id: 'blibli',
+					link: 'https://www.blibli.com/merchant/aerostreet-official-store/AEO-60022',
+					icons: 'Blibli icon.png',
+					text: '',
+					// css: [
+					// 	'color: red',
+					// 	'font-weight: bold',
+					// ],
+				},
+				{
+					id: 'whatsapp',
+					link: 'https://wa.me/6288707007000?text=Hai%20Aerostreet%2C%20nama%20saya%20',
+					icons: 'wa.png',
+					text: 'Pesanan Via WA',
+				},
+				{
+					id: 'whatsapp',
+					link: 'https://wa.me/6282360707003?text=Hai%20Aerostreet%2C%20pesanan%20bermasalah%20saya%20no%20',
+					icons: 'wa.png',
+					text: 'Customer Service',
+				},
+			];
+
+			function load() {
+				let marketplaceWrapper = document.getElementById('group');
+				// for (let i = 0; i < 1; i++) {
+				// 	const template = `<a style="${data[i].css ? data[i].css.join('; ') : ''}" class="marketplace_item_wa" target="_blank" href="${
+				// 		data[i].link
+				// 	}">
+				// 											<img class="marketplace_logo" src="./assets/img/${[data[i].icons]}" />
+				// 											<span>${data[i].text}</span>
+				// 										</a>`;
+				// 	marketplaceWrapper.innerHTML += template;
+				// }
+				for (let i = 0; i < data.length-1; i++) {
+					const template = `<a style="${data[i].css ? data[i].css.join('; ') : ''}" class="marketplace_item" target="_blank" href="${
+						data[i].link
+					}">
+															<img class="marketplace_logo" src="./assets/img/${[data[i].icons]}" />
+															<span>${data[i].text}</span>
+														</a>`;
+					marketplaceWrapper.innerHTML += template;
+				}
+
+				for (let i = data.length-1; i < data.length; i++) {
+					const template = `<a style="${data[i].css ? data[i].css.join('; ') : ''}" class="marketplace_item_wa" target="_blank" href="${
+						data[i].link
+					}">
+															<img class="marketplace_logo" src="./assets/img/${[data[i].icons]}" />
+															<span>${data[i].text}</span>
+														</a>`;
+					marketplaceWrapper.innerHTML += template;
+				}
+			}
+		</script>
+		<link
+			rel="icon"
+			href="./assets/img/aerostreetnew.png"
+			type="image/gif"
+			sizes="16x16"
+		/>
+		<style>
+			:root {
+				--padding: 40px;
+				--padding-mobile: 20px;
+
+				/* jika ingin tampilan komputer 3 kolom ke kanan */
+				/* --marketplace-item-width: calc(((100vw - (100vh - (var(--padding) * 2))) - (40px * 4)) / 3); */
+				/* --marketplace-item-height: calc(((100vh - 56px) - (40px * 4)) / 3); */
+
+				/* jika ingin tampilan komputer 2 kolom ke kanan */
+				--marketplace-item-width: calc(((100vw - (100vh - (var(--padding) * 1))) - (40px * 2)) / 2);
+				--marketplace-item-height: calc(((100vh - 56px) - (100px * 4)) / 2);
+
+				/* jika ingin tampilan komputer 1 kolom ke kanan */
+				--marketplace-item-width-wa: calc(((100vw - (100vh - (var(--padding) * 1))) - (40px * 1)) / 1);
+				--marketplace-item-height-wa: calc(((100vh - 56px) - (115px * 5)) / 1);
+
+				/* jika ingin tampilan hp 3 kolom ke kanan */
+				/* --marketplace-item-width-mobile: calc((100vw - (20px * 4)) / 3); */
+				/* --marketplace-item-height-mobile: calc((89vh - (100vw - 40px) - 100px) / 3); */
+
+				/* jika ingin tampilan hp 2 kolom ke kanan */
+				--marketplace-item-width-mobile: calc((100vw - (20px * 3)) / 2);
+				--marketplace-item-height-mobile: calc((89vh - (110vw - 40px) - 100px) / 2);
+
+				/* jika ingin tampilan hp 1 kolom ke kanan */
+				--marketplace-item-width-wa-mobile: calc((100vw - (20px * 2)) / 1);
+				--marketplace-item-height-wa-mobile: calc((70vh - (125vw - 10px) - 100px) / 1);
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100vw;
+				height: 100%;
+				font-family: Helvetica, sans-serif;
+				font-size: 16px;
+				/* overflow-y: hidden; */
+			}
+
+			a {
+				text-decoration: none;
+				color: #000000;
+			}
+
+			.container {
+				width: 100vw;
+				height: 100%;
+				display: flex;
+				overflow: none;
+			}
+
+			.container_logo {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				padding: var(--padding) 0 var(--padding) var(--padding);
+			}
+
+			.aero_logo {
+				margin-top: 56px;
+				width: calc((100vh - 56px) - (var(--padding) * 2));
+				outline: 1px solid #eaeaea;
+			}
+
+			.container_marketplace {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: var(--padding);
+				gap: var(--padding);
+			}
+
+			.container_marketplace > span {
+				font-weight: bold;
+			}
+
+			.marketplace_group {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: var(--padding);
+			}
+
+			.marketplace_item {
+				cursor: pointer;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+				min-width: fit-content;
+				width: var(--marketplace-item-width);
+				min-height: 100px;
+				height: var(--marketplace-item-height);
+				/* outline: 1px solid #eaeaea; */
+				background-color: #f5f5f5;
+				transition: box-shadow 0.3s ease-in-out,
+				background-color 0.3s ease-in-out;
+			}
+
+			.marketplace_item_wa {
+				cursor: pointer;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+				min-width: fit-content;
+				width: var(--marketplace-item-width-wa);
+				min-height: 100px;
+				height: var(--marketplace-item-height-wa);
+				/* outline: 1px solid #eaeaea; */
+				background-color: #f5f5f5;
+				transition: box-shadow 0.3s ease-in-out,
+				background-color 0.3s ease-in-out;
+			}
+
+			.marketplace_item_wa:hover {
+				transition: box-shadow 0.3s ease-in-out,
+				background-color 0.3s ease-in-out;
+				background-color: #ffffff;
+				box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1),
+					0 8px 10px -6px rgb(0 0 0 / 0.1);
+			}
+
+			.marketplace_logo {
+				width: auto;
+				height: 80px;
+			}
+
+			@media only screen and (max-width: 768px) {
+				body {
+					font-size: 12px;
+				}
+				.container {
+					flex-direction: column;
+				}
+
+				.container_logo {
+					padding: var(--padding-mobile) var(--padding-mobile) 0
+						var(--padding-mobile);
+				}
+
+				.aero_logo {
+					margin-top: 0;
+					height: calc(100vw - (var(--padding-mobile) * 2));
+					width: calc(100vw - (var(--padding-mobile) * 2));
+				}
+
+				.container_marketplace {
+					padding: var(--padding-mobile);
+					gap: var(--padding-mobile);
+				}
+
+				.marketplace_group {
+					gap: var(--padding-mobile);
+				}
+
+				.marketplace_item {
+					width: var(--marketplace-item-width-mobile);
+					min-height: calc(50px + var(--padding-mobile));
+					height: var(--marketplace-item-height-mobile);
+					gap: 7px;
+				}
+
+				.marketplace_item_wa {
+					width: var(--marketplace-item-width-wa-mobile);
+					min-height: calc(50px + var(--padding-mobile));
+					/* height: var(--marketplace-item-width-wa-mobile); */
+					gap: 7px;
+				}
+
+				.marketplace_logo {
+					height: 50px;
+				}
+			}
+		</style>
+	</head>
+	<body onload="load()">
+		<div class="container">
+			<div class="container_logo">
+				<img class="aero_logo" src="./assets/img/AEROSTREET.jpg" />
+			</div>
+			<div class="container_marketplace">
+				<span>Pilih Official Store kami dibawah ini :</span>
+				<div id="group" class="marketplace_group"></div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<div>
+			<center>PT Adco Pakis Mas @2023</center>
+		</div>
+		</br>
+	</footer>
+</html>
